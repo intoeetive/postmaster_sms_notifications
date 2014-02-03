@@ -1,0 +1,9 @@
+This is Service for Postmaster module [https://objectivehtml.com/index.php] which allows SMS notification to be sent.
+
+It requires account with Twilio gateway [https://www.twilio.com]
+
+To install, simply copy over the files. Now you should be able to select "SMS" as "Email Service" for all your Parcels, Hooks and Notifications in Postmaster Control Panel.
+
+"From email" and "To email" fields should contain sender/recipient phone numbers in international format (numbers only prefixed with +, e.g. +1234567890). Other then this, set up SMS notifications just like you do with email notifications.
+
+Postmaster module is required.
