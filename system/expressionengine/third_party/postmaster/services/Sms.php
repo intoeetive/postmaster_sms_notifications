@@ -17,6 +17,7 @@ class Sms_postmaster_service extends Base_service {
 	
 	public $default_settings = array(
         'sms_gateway'	=> 'twilio',
+        'mode'	=> 'sandbox',
         'sms_username'	=> '',
         'sms_password'	=> '',
         //'sms_api_id'	=> '',
@@ -31,6 +32,17 @@ class Sms_postmaster_service extends Base_service {
 			'settings' => array(
 				'options' => array(
 					'twilio'     => 'Twilio'
+				)		
+			)
+		),
+        'mode' => array(
+			'type'  => 'select',
+			'id'	=> 'mode',
+			'label' => 'Mode',
+			'settings' => array(
+				'options' => array(
+					'sandbox'  => 'Sandbox',
+                    'prod'     => 'Production'
 				)		
 			)
 		),
@@ -70,6 +82,7 @@ class Sms_postmaster_service extends Base_service {
 		}
         
         $settings_a = array(
+            'mode'  => $settings->mode,
             'sms_username'  => $settings->sms_username,
             'sms_password'  => $settings->sms_password,
             'sms_from_number' => $parsed_object->from_email

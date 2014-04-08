@@ -40,7 +40,7 @@
 			$this->_ci =& get_instance();
 
 			//get settings from config
-			$this->mode        = 'sandbox';//'prod'
+			$this->mode        = $config['mode'];;//'prod'
 			$this->account_sid = $config['sms_username'];
 			$this->auth_token  = $config['sms_password'];
 			$this->api_version = '2010-04-01';
